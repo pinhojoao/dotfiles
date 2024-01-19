@@ -17,8 +17,8 @@ ln -s $DOTFILES/kitty $HOME/.config/kitty
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 # Git
-ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
-ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
+# ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
+# ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 
 # Phpactor
 rm -rf $HOME/.config/phpactor
@@ -27,12 +27,16 @@ ln -s $DOTFILES/phpactor $HOME/.config/phpactor
 # Scripts
 mkdir -p $HOME/.local/bin
 
-ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
-ln -sf $DOTFILES/scripts/deliver $HOME/.local/bin/deliver
+# Alias
+rm -rf $HOME/.aliases
+ln -s $DOTFILES/.aliases $HOME/.aliases 
+
+# ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
+# ln -sf $DOTFILES/scripts/deliver $HOME/.local/bin/deliver
 
 # NVM (Node Version Manager)
-mkdir -p $HOME/.nvm
-ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
+# mkdir -p $HOME/.nvm
+# ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
 
 # Oh My Zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then

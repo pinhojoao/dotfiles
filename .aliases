@@ -1,0 +1,27 @@
+alias gs="git status -s"
+alias gl="git log"
+alias gll="git log --pretty=format:\"%C(yellow)%h\\\\ %ad%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --date=short"
+alias gc="git commit -m"
+alias ga="git add ."
+alias gp="git push --all && git push --tags"
+alias gclear="git reset --hard && git clean -df"
+alias gb="git branch"
+alias k9="~/k9s/k9s"
+alias sail="[ -f sail ] && sh sail || sh vendor/bin/sail"
+#alias ssh="kitty +kitten ssh"
+##### SOMOS
+alias brcont="cd ~/somos/io.plurall/content && mvn clean install -DskipTests && export DOTENV_FILE="$HOME/Somos/io.plurall/local.env" && dotenv java -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 api/target/content-bundle-api-1.0.0-SNAPSHOT-runner.jar"
+tunsql() {
+  ssh joao.oliveira@172.19.0.11 -L "$1":"$2":3306 -i ~/.ssh/id_rsa
+}
+tun() {
+  ssh joao.oliveira@172.19.0.11 -L "$1":"$2" -i ~/.ssh/id_rsa
+}
+##### TMUX
+alias ta="tmux attach -t "
+alias tl="tmux ls"
+alias tk="tmux kill-session -t "
+alias tn="tmux new -s "
+alias vim="nvim "
+##### JAVA
+alias mci="mvn clean install -DskipTests"
